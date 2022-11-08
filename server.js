@@ -146,10 +146,6 @@ app.get('*', function (req, res, next) {
   res.redirect('https://' + req.headers.host + req.path);
 });
 
-http.createServer(app).listen(80, function () {
-  console.log('Express TTP server listening on port 80');
-});
-
-https.createServer(optionSSL, app).listen(443, function () {
-  console.log('Express HTTP server listening on port 443');
-});
+app.listen(PORT,(req,resp)=>{
+  console.log('80')
+})
